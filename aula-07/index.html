@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html ng-app="meuModulo">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>Angular JS</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 </head>
+
 <body ng-controller="indexController">
+
 <header class="container">	
 	<h2 ng-bind="titulo"></h2>
 </header>
+
 <main class="container">
 	<div class="row">
 		<input type="text" ng-model="busca.email" placeholder="Busca">
-
 	</div>
+
 	<table class="striped">
 		<thead>
 			<tr>
@@ -37,6 +41,7 @@
 			</tr>
 		</tbody>
 	</table>
+
 	<div class="row">
 		<!-- Modal Trigger -->
   		<a class="modal-trigger waves-effect waves-light btn" href="#modal1">Adicionar</a>
@@ -47,8 +52,10 @@
   <!-- Modal Structure -->
   <div id="modal1" class="modal modal-fixed-footer">
     <div class="modal-content">
-      <h4>Adicionar Aluno</h4>
-      <p>Preencha os dados do Aluno</p>
+	  <h4>Adicionar Aluno</h4>
+	  
+	  <p>Preencha os dados do Aluno</p>
+	  
       <div class="row">
       	<div class="input-field col m6 s12">
           <input type="text" ng-model="Aluno.nome" class="validate">
@@ -58,21 +65,25 @@
         <div class="input-field col m6 s12">
           <input type="text" ng-model="Aluno.email" class="validate">
           <label>E-mail</label>
-        </div>
+		</div>
+		
         <div class="input-field col m4 s12">
           <input type="text" ng-model="Aluno.nota1" class="validate">
           <label>Nota1</label>
-        </div>
+		</div>
+		
         <div class="input-field col m4 s12">
           <input type="text" ng-model="Aluno.nota2" class="validate">
           <label>Nota2</label>
-        </div>
+		</div>
+		
         <div class="input-field col m4 s12">
           <input type="text" ng-model="Aluno.nota3" class="validate">
           <label>Nota3</label>
         </div>
       </div>
-    </div>
+	</div>
+	
     <div class="modal-footer">
     	<a ng-click="addAluno(Aluno)" class="waves-effect waves-light btn blue">Adicionar</a>
       	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancelar</a>
@@ -110,6 +121,7 @@
 				aluno.media = media(aluno);
 			});
 		};
+		
 		var contar2 = 0;
 		var media = function(Aluno){
 			console.log(contar2++);
