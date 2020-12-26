@@ -14,7 +14,6 @@
 	<div class="row">
 		<h2 ng-bind="titulo"></h2>
 	</div>	
-	
 </header>
 
 <main class="container">
@@ -150,6 +149,7 @@
 
 		$scope.editando = false;
 		var alunoEditar;
+		
 		$scope.editarAluno = function(Aluno){
 			$scope.editando = true;			
 			angular.copy(Aluno,$scope.Aluno);
